@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+	<tabs>
+		<mobweb module="addfreeproducttocart">
+			<label>Add Free Product To Cart</label>
+			<sort_order>100</sort_order>
+		</mobweb>
+	</tabs>
+	<sections>
+		<addfreeproducttocart module="addfreeproducttocart">
+			<tab>mobweb</tab>
+			<label>Select A Product</label>
+			<sort_order>10</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			<groups>
+				<general module="addfreeproducttocart">
+					<label>Product</label>
+					<sort_order>10</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<fields>
+						<!-- Access this field via: Mage::getStoreConfig( 'addfreeproducttocart/general/custom_option_1' ) -->
+						<product_sku>
+							<label>Free Product SKU</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</product_sku>
+						<min_qty>
+							<label>Minimum Cart Quantity To Get Free Product</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>10</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>0</show_in_store>
+						</min_qty>
+					</fields>
+				</general>
+			</groups>
+		</addfreeproducttocart>
+	</sections>
+</config>

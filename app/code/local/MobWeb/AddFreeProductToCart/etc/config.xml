@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <MobWeb_AddFreeProductToCart>
+            <version>0.1.0</version>
+        </MobWeb_AddFreeProductToCart>
+    </modules>
+    <global>
+        <models>
+            <addfreeproducttocart>
+                <class>MobWeb_AddFreeProductToCart_Model</class>
+            </addfreeproducttocart>
+        </models>
+    	<helpers>
+    		<addfreeproducttocart>
+    			<class>MobWeb_AddFreeProductToCart_Helper</class>
+    		</addfreeproducttocart>
+    	</helpers>
+    </global>
+    <!-- This event observer is called everytime before the cart is
+    saved. It either adds or removes the free product, depending on the
+    cart contents -->
+    <frontend>
+        <events>
+            <sales_quote_save_before>
+                <observers>
+                    <addfreeproducttocart>
+                        <type>model</type>
+                        <class>addfreeproducttocart/observer</class>
+                        <method>salesQuoteSaveBefore</method>
+                    </addfreeproducttocart>
+                </observers>
+            </sales_quote_save_before>
+        </events>
+    </frontend>
+</config>
