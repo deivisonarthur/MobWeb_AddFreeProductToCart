@@ -1,6 +1,6 @@
 # MobWeb_AddFreeProductToCart extension for Magento
 
-...
+While studying Magento I found that the easiest way for me personally to learn something new is to break everything down into smaller parts. This extension is such a "smaller part". It doesn't really add any value and can't be used directly, instead it can help to provide an overview about how a task is accomplished in Magento. See my [other repositories](https://github.com/mobweb?tab=repositories) for more such example extensions.
 
 ## Installation
 
